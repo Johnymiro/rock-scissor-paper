@@ -10,32 +10,24 @@ public class Game {
         this.numberOfGames = numberOfGames;
     }
 
-
     public void play(Player player1, Player player2) {
-
 
         for (int i = 0; i < numberOfGames; i++) {
 
             score(player1, player2);
         }
 
-
         judge(player1, player2);
-
-
     }
 
 
-
     private void judge(Player player1, Player player2) {
-
 
         if (player1.getNumOfWins() == player2.getNumOfWins()) {
 
             System.out.println("Player " + player1.getName() + " wins " + player1.getNumOfWins() + " times");
             System.out.println("Player " + player2.getName() + " wins " + player2.getNumOfWins() + " times");
             System.out.println("\nResult: Draw!!!");
-
 
         } else if (player1.getNumOfWins() < player2.getNumOfWins()) {
 
@@ -50,7 +42,6 @@ public class Game {
             System.out.println("\nResult: Player " + player1.getName() + " wins!!!");
         }
 
-
     }
 
 
@@ -58,7 +49,6 @@ public class Game {
     private void score(Player player1, Player player2) {
 
         if (player1.playerHand() == player2.playerHand()) {
-
             return;
         }
 
@@ -67,7 +57,6 @@ public class Game {
         switch (player1.playerHand()) {
 
             case ROCK: {
-
                 switch (player2.playerHand()) {
 
                     case PAPER:
@@ -81,9 +70,7 @@ public class Game {
                 break;
             }
 
-
             case PAPER: {
-
                 switch (player2.playerHand()) {
 
                     case ROCK:
@@ -97,9 +84,7 @@ public class Game {
                 break;
             }
 
-
             case SCISSOR: {
-
                 switch (player2.playerHand()) {
 
                     case ROCK:
